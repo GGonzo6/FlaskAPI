@@ -85,7 +85,7 @@ def slackPost(string):
     request.urlopen(req)
     return jsonify({'input':string, 'output':("Posted " + string + " to group 2 slack channel.")})
 
-@app.route('/fibonacci/<int:x>', methods=['GET']) # Fibonacci
+@app.route('/fibonacci/n<int:x>', methods=['GET']) # Fibonacci
 def fibonacci(x):
     if x >= 0:
         a = 0
